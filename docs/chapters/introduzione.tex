@@ -1,0 +1,53 @@
+% !TEX encoding = UTF-8
+% !TEX TS-program = pdflatex
+% !TEX root = ../main.tex
+
+\chapter{Introduzione}
+
+\section{Finalità e ragioni della ricerca}
+
+Il progetto discusso nella presente relazione concerne il riconoscimento di moto implicito e esplicito per mezzo di una rete neurale convoluzionale. Risulta inoltre d'interesse verificare se, e possibilmente come, un determinato strato di una rete neurale si specializzi nel riconoscimento dell'entità di enteresse (nella fattispecie, il moto). Il punto di riferimento iniziale è stata la replica mediante software di un esperimento svolto su volontari umani nell'ambito della ricerca di una correlazione tra una determinata area del cervello e il riconoscimento di certe tipologie di moto. L'esperimento è stato riprodotto il quanto più fedelmente possibile nell'ottica di evidenziare possibili analogie e differenze. I risultati e gli approfondimenti degli esperiementi svolti sono riportati in questo documento.
+
+\section{Definizioni di moto implicito e esplicito}
+
+Nella nozione generale di moto si distinguono due definizioni alla base degli esperimenti condotti e di seguito discussi:
+\begin{itemize}
+	\item \textbf{Moto implicito}: il moto implicato dalle circostanze di una scena statica (e.g. la fotografia di un velocista nel pieno di una gara);
+	\item \textbf{Moto esplicito}: l'effettivo atto del muoversi.
+\end{itemize}
+
+\subsection{Glass pattern}
+
+I \textit{glass pattern} sono motivi generati dalla sovrapposizione di due pattern di punti casuali: un modello originale e un secondo generato attraverso una trasformazione lineare o non lineare dell'originale. Sebbene ogni insieme sia casuale, è possibile generare una varietà di diversi modelli spaziali come cerchi, spirali, iperboli, introducendo correlazioni tra i due gruppi di punti. A tal proposito, il moto implicito può essere reso attraverso una sequenza disordinata di punti, mentre quello esplicito inserendo un certo grado. \\
+
+[INSERIRE ESEMPI DI GLASS PATTERN] 
+
+\section{Esperimento di riferimento}
+
+L'esperimento di riferimento per il progetto, condotto su volontari umani, ha l'obiettivo di evidenziare come una certa area cerebrale sia fortemente coinvolta nel riconoscimento di scene di moto implicito e/o esplicito. Tale esperimento espone il volontario alla visione di \textit{glass pattern} appositamente calibrati per rendere più o meno palese la presenza di una determinata tipologia di moto. Il risultato è auspicabilmente raggiunto misurando l'accuratezza di riconoscimento di un dato movimento e confrontando poi i risultati con quelli di una sessione di riconoscimento in cui la zona target viene inibita. La sequenza di test svolti è sinteticamente riassunta dai punti seguenti:
+
+\begin{itemize}
+	\item \textbf{Moto esplicito}
+	\begin{enumerate}
+		\item Rilevazione della soglia per il movimento reale: indica quanti punti mettere nella figura per avere una accuratezza del 79\% circa;
+		\item Test su movimento esplicito circolare: test che dà come output l'accuratezza del partecipante;
+		\item Test su movimento esplicito circolare con impulsi TSM: test con impulsi TMS rilasciati per ogni presentazione dei pattern, l'output indica l'accuratezza del partecipante.
+	\end{enumerate}
+
+	\item \textbf{Moto implicito}
+	\begin{enumerate}
+		\item Rilevazione della soglia per il movimento implicito: indica quante coppie di punti mettere nella figura per avere una accuratezza del 79\% circa;
+		\item Test su movimento implicito:  test che dà come output l'accuratezza del partecipante;
+		\item Test su movimento implicito con impulsi TSM:  test con impulsi TMS rilasciati per ogni presentazione dei pattern, l'output indica l'accuratezza del partecipante.
+	\end{enumerate}
+\end{itemize}
+
+\section{Tesi}
+
+I principali obiettivi della ricerca sono i seguenti:
+
+\begin{enumerate}
+	\item \textbf{Replicare l'esperimento di riferimento}: tale obiettivo viene perseguito mediante la realizzazione di una rete neurale convoluzionale;
+	\item \textbf{Verificare se la rete proposta sia in grado di generalizzare il concetto di moto}: tale obiettivo viene perseguito allenando la rete su di una data tipologia di moto (i.e. implicito o esplicito) per poi testare le sue performance sulla tipologia opposta (e.g. allenare su moto implicito e testare su moto esplicito);
+	\item \textbf{Verificare l'eventuale specializzazione degli strati della rete nel riconoscimento del moto}: tale obiettivo viene perseguito testando la rete molteplici volte, disattivando ogni volta uno strato diverso, e valutando le performance di predizione. 
+\end{enumerate}
