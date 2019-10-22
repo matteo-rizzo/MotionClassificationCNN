@@ -1,0 +1,13 @@
+{
+  "model": "2D",
+  "training_dataset": "dataset/circular_dipoles_90",
+  "test_dataset": "dataset/circular_dipoles_90",
+  "specialization": {
+    "run_tests": false,
+    "outputs_visualization": false,
+    "activation_heatmap": false,
+    "gradcam": false,
+    "layers_removal": false,
+    "drop_block_size": 15
+  }
+}

@@ -1,0 +1,9 @@
+keras
+tensorflow
+opencv-python
+h5py
+Pillow
+matplotlib
+numpy
+tabulate
+tqdm
